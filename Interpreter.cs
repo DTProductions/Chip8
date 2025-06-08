@@ -170,7 +170,7 @@ namespace Chip8Interpreter {
 		}
 
 		public void LoadFontCharIntoIndexRegister(byte character) {
-			indexRegister = memory[0x50 + registers[character] * 5];
+			indexRegister = (ushort) (0x50 + character * 5);
 		}
 
 		public void GenerateRandomNumberInRegister(byte registerIndex, byte binaryComparator) {
